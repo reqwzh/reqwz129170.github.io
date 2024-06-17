@@ -1,445 +1,430 @@
-
-<!DOCTYPE HTML>
-<html lang="zh-hans">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="renderer" content="webkit" />
-    <title>Sens World</title>
-    <link rel="stylesheet" href="static/css/index.css" />
-    <!--<style>-->
-        <!--html,body {-->
-            <!--background-image: url("//t.cn/Raa7dxT");-->
-            <!--color: #333;-->
-        <!--}-->
-        <!--/* 好歹还是加个边框吧 */-->
-        <!--.display-block {-->
-            <!--padding: 10px;-->
-            <!--border: 2px solid rgb(0,155,255);-->
-            <!--margin: 10px;-->
-            <!--overflow: auto;-->
-            <!--width: 400px; height: 90vh;-->
-            <!--float: left;-->
-            <!--background: rgba(0,155,255,0.5);-->
-        <!--}-->
-        <!--/* 还差一个版块来介绍自己 */-->
-        <!--.intro-box{-->
-            <!--margin: 10px;-->
-            <!--padding: 12px;-->
-            <!--min-height: 110vh;-->
-            <!--overflow: hidden;-->
-            <!--background: rgba(0,100,205,0.5);-->
-        <!--}-->
-        <!--/* 使命完成了，给主要的版块让让位置吧 */-->
-        <!--.display-block {-->
-            <!--transform-origin: 0 50%;-->
-             <!-- -webkit-transform: rotateY(30deg);-->
-            <!--transform: rotateY(30deg);-->
-            <!--margin-right: -100px;-->
-        <!--}-->
-    <!--</style>-->
-</head>
-<body>
-<div class="preload-block">
-    <img src="https://ws1.sinaimg.cn/large/6f6196f2gy1fgsxbr1390j21hc0zkncd.jpg" />
-</div>
-
-<div class="welcome-block j-welcome-block  ">
-    <div class="welcome-block-main rel">
-        <div class="welcome-box-center j-welcome-box-center">
-            <span class="welcome-text j-welcome-text line1">额，趁现在资源还在加载</span>
-            <span class="welcome-text j-welcome-text line2">我先给你讲一个冷笑话</span>
-            <span class="welcome-text j-welcome-text line3">有一个叫程思序的人</span>
-            <span class="welcome-text j-welcome-text line4">整天思程序</span>
-            <span class="welcome-text j-welcome-text line5">．．．．．．</span>
-            <span class="welcome-text j-welcome-text line6">好尴尬，我们来看看资源加载完没有</span>
-            <span class="welcome-text j-welcome-text line7 fail">哇塞，居然没加载完！</span>
-            <span class="welcome-text j-welcome-text line7 success">哇塞，已经加载完了！</span>
-            <span class="welcome-text j-welcome-text line8 fail">那别怪没音乐特效了~</span>
-            <span class="welcome-text j-welcome-text line8 success">那我们就立刻开始吧！</span>
-            <span class="welcome-text-line">|</span>
-            <div class="welcome-btn-start"></div>
-        </div>
-
-        <div class="welcome-box-btn j-welcome-box-btn hide">
-            <input placeholder="" type="checkbox" class="j-welcome-btn">
-            <span class="welcome-btn"></span>
-            <p class="welcome-text-tip">点击按钮后记得使用滚轮哟</p>
-            <p class="welcome-text-add">
-                <a target="_blank" href="https://github.com/senschen/SensWorld">代码地址1</a>
-                <br>
-                <a target="_blank" href="https://github.com/senschen/SensWorldVue">代码地址2(vue版)</a>
-            </p>
-        </div>
-    </div>
-</div>
-<div class="sky-block j-sky-block  ">
-    <div id="j-wrapper-block-back" class="wrapper-block">
-        <div id="j-stage-block-back" class="stage-block-back">
-            <img src="static/img/back.jpg" ondragstart="return false"
-                 class="wrapper-img j-wrapper-img-back"/>
-            <canvas id="wrapper-cvs" class="wrapper-cvs j-wrapper-cvs"></canvas>
-        </div>
-    </div>
-    <div class="wrapper-block-main j-wrapper-block-main">
-        <div class="stage-block-main j-stage-block-main">
-            <div class="stage-box-earth j-stage-box-earth">
-                <img src="static/img/earth.png" alt="" class="j-stage-img-earth">
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="intro-block j-intro-block  hide">
-    <div class="style-block"></div>
-    <pre class="display-block">
-    </pre>
-    <div class="intro-box">
-        <div class="intro-box-main j-intro-box-main  hide">
-            <p class="intro-box-hide">&emsp;&emsp;我叫周军，</p>
-<!--             <p class="intro-box-hide">&emsp;&emsp;15年年初开始在猪八戒网络有限公司品牌市场相关部门，从事前端开发工作</p>
-            <p class="intro-box-hide">&emsp;&emsp;擅长页面重构、动画（css、js、canvas）</p>
-            <p class="intro-box-hide">&emsp;&emsp;在公司主要做品牌、活动相关项目的开发以及外投用的下单页面的开发</p>
-            <p class="intro-box-hide">&emsp;&emsp;平时工作用到的框架技术FIS-Plus、Vue及相关技术栈、Nodejs</p>
-            <h3 class="intro-box-hide">&emsp;&emsp;部分参与的项目：</h3> -->
-            <ul class="intro-list-task">
-                <li class="intro-box-hide">
-                    <p class="c-fff">2015：<a class="ud" href="http://cyy.zbj.com/" target="_blank">哈哈</a>+微信版产业园 ---（ps：均已停止维护有1年之久）</p>
-                    <p class="intro-text-desc">主要功能有面向客户提供企业注册申请功能；<br>
-                        面向运营人员提供新闻的配置和显示功能；<br>
-                        面向运营人员提供线下园区的配置和显示功能</p>
-                </li>
-                <li class="intro-box-hide">
-                    <p class="c-fff">2015：<a class="img" href="javascript:" target="">八戒网盟推广平台 <img src="https://ws1.sinaimg.cn/large/6f6196f2gy1fgsxjczt08j20vl0n9jso.jpg" alt=""></a></p>
-                    <p class="intro-text-desc">面向合作方提供广告代码自动生成功能<br>
-                        面向合作方提供广告效果数据查询展示功能；</p>
-                </li>
-                <li class="intro-box-hide">
-                    <p class="c-fff">2015：<a class="img" href="javascript:" target="">猪八戒创业者频道 <img src="https://ws1.sinaimg.cn/large/6f6196f2gy1fgsxjdvbr9j21a80o7adz.jpg" alt=""></a></p>
-                    <p class="intro-text-desc">面向运营人员提供版块的配置和显示功能<br>
-                        面向客户提供表单申请功能</p>
-                </li>
-                <li class="intro-box-hide">
-                    <p class="c-fff">2016：<a class="ud" href="http://sandbox.runjs.cn/show/2q2yqzeb" target="_blank">猪八戒新年开门红活动</a>（此处链接为demo链接）</p>
-                </li>
-                <li class="intro-box-hide">
-                    <p class="c-fff">2016：全站订单来源统计功能</p>
-                </li>
-                <li class="intro-box-hide">
-                    <p class="c-fff">2016：<a class="ud" href="http://bang.zbj.com/" target="_blank">新版八戒众帮</a></p>
-                </li>
-                <li class="intro-box-hide">
-                    <p class="c-fff">2016：<a class="ud" href="http://88.zbj.com/redPacket/Main.html" target="_blank">猪八戒88免单节报名页以及抢购页</a></p>
-                </li>
-                <li class="intro-box-hide">
-                    <p class="c-fff">2016：<a class="ud" href="http://10years.zbj.com/" target="_blank">猪八戒十周年官网</a></p>
-                </li>
-                <li class="intro-box-hide">
-                    <p class="c-fff">2016：<a class="ud" href="http://city.zbj.com/" target="_blank">八戒城市部分分站</a></p>
-                </li>
-                <li class="intro-box-hide">
-                    <p class="c-fff">2017：<a class="ud" href="http://zt.tianpeng.com/ztoper/tp/20170427tppp/" target="_blank">天蓬网订单快速发布功能</a></p>
-                </li>
-                <li class="intro-box-hide">
-                    <p class="c-fff">2017：<a class="img" href="javascript:" target="">猪八戒服务商数字名片活动 <img src="https://ws1.sinaimg.cn/large/6f6196f2gy1fgsxjd5qcbj20ch0qigm2.jpg" alt=""></a></p>
-                </li>
-                <li class="intro-box-hide">
-                    <p class="c-fff">2017：<a class="ud" href="http://xiaoyuan.zbj.com/" target="_blank">八戒校园</a></p>
-                </li>
-                <li class="intro-box-hide">
-                    <p class="c-fff">2017：<a class="ud" href="http://csr.zbj.com/" target="_blank">八戒阳光</a></p>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
-<script src="static/js/MusicVisualizer.js"></script>
-<script src="static/js/makeSky.js"></script>
-<script src="static/js/breakImg.js"></script>
-<script>
-    var Cookie = (function () {
-        function setCookie(name, value, day) {
-            var oDate = new Date();
-            oDate.setDate(oDate.getDate() + day);
-            document.cookie = name + '=' + value + ';expires=' + oDate;
-        }
-        function delCookie(name) {
-            setCookie(name, 1, -1);
-        }
-        function getCookie(name) {
-            var arr = document.cookie.split('; ');
-            for(var i = 0; i < arr.length; i++) {
-                var arrName = arr[i].split('=');
-                if(arrName[0] == name) {
-                    return arrName[1];
-                }
-            }
-            return '';
-        }
-        return {
-            set: setCookie,
-            del: delCookie,
-            get: getCookie
-        }
-    })();
-
-    var runPrefixMethod = function(element, method) {
-        var usablePrefixMethod;
-        ["webkit", "moz", "ms", "o", ""].forEach(function(prefix) {
-            if (usablePrefixMethod) return;
-            if (prefix === "") {
-                method = method.slice(0,1).toLowerCase() + 	method.slice(1);
-            }
-
-            var typePrefixMethod = typeof element[prefix + method];
-
-            if (typePrefixMethod + "" !== "undefined") {
-                if (typePrefixMethod === "function") {
-                    usablePrefixMethod = element[prefix + method]();
-                } else {
-                    usablePrefixMethod = element[prefix + method];
-                }
-            }
-        });
-
-        return usablePrefixMethod;
-    };
-
-    var prmFirst = new Promise(function (resolve) {
-        var step = 0;
-        var isLoaded = false;
-        var lastSum = 0;
-
-        var mv = new MusicVisualizer({
-            size: 128,
-            visualizer: function (arr) {
-                if(step === 3) return;
-                var sum = arr.reduce(function (prevResult, item) {
-                    return prevResult + item;
-                });
-                if (sum > 5000) {
-                    if(lastSum - sum > 500){
-                        $('.j-wrapper-block-main').css({
-                            'transform': 'scale(0.5)'
-                        });
-
-                        lastSum = sum;
-                    }
-                    else if(sum - lastSum > 200){
-                        $('.j-wrapper-block-main').css({
-                            'transform': 'scale(' + (0.5 + 2*(sum - lastSum) / 10000) + ')'
-                        });
-                        lastSum= sum;
-                    }
-                }
-                else {
-                    $('.j-wrapper-block-main').css({
-                        'transform': 'scale(0.5)'
-                    });
-                    lastSum = sum;
-                }
-            }
-        });
-        mv.play('static/res/Routine.mp3',function () {
-            isLoaded = true;
-            if(step > 0){
-                mv.start();
-            }
-        });
-
-        if(!Cookie.get('finished')){
-            var welComeText = document.getElementsByClassName('j-welcome-text');
-            [].forEach.call(welComeText,function (item) {
-                item.classList.add('play');
-            });
-
-            setTimeout(function () {
-                var _removeFlagStr = isLoaded ? 'fail' : 'success';
-                [].forEach.call(welComeText, function (item) {
-                    if (item.classList.contains(_removeFlagStr)) {
-                        item.remove();
-                    }
-                });
-            },8000);
-            //welcome-box-center
-            setTimeout(function () {
-                document.getElementsByClassName('j-welcome-box-center')[0].classList.add('die');
-                setTimeout(function () {
-                    document.getElementsByClassName('j-welcome-box-center')[0].remove();
-                    document.getElementsByClassName('j-welcome-box-btn')[0].classList.remove('hide');
-                    document.getElementsByClassName('j-welcome-box-btn')[0].classList.add('show');
-                },1800);
-            },11000);
-        }
-        else {
-            document.getElementsByClassName('j-welcome-box-center')[0].remove();
-            document.getElementsByClassName('j-welcome-box-btn')[0].classList.remove('hide');
-            document.getElementsByClassName('j-welcome-box-btn')[0].classList.add('show');
-        }
-
-        function step2() {
-            step = 1;
-
-            if(isLoaded){
-                mv.start();
-            }
-            setTimeout(function () {
-                runPrefixMethod(document.documentElement, "RequestFullScreen");
-                document.getElementsByClassName('j-welcome-block')[0].classList.add('hide');
-            },1000);
-
-            makeSky.init(function (far) {
-                if (step === 1 && far > 200) {
-                    step = 2;
-                    $('.j-wrapper-block-main').css({
-                        'z-index': '20'
-                    });
-                    $('.j-stage-block-main').css({
-                        'transform': 'translate3d(0,0,0)'
-                    });
-                    $('.j-stage-box-earth').click(function () {
-                        step = 3;
-                        var $this = $(this);
-                        if ($this.hasClass('no')) return;
-                        $this.addClass('shake no');
-                        var bi1 = new MakeBreakImg({
-                            el: $('.j-stage-img-earth')
-                        });
-                        var bi2 = new MakeBreakImg({
-                            el:  $('.j-wrapper-img-back'),
-                            strStyle: 'position: relative;z-index: 10;opacity: 0.5',
-                            itemSpl: 10
-                        });
-
-                        makeSky.backToStart(function () {
-                            $('body').addClass('nocursor');
-                            $('.j-wrapper-cvs').fadeOut(1000);
-                            $('#j-wrapper-block-back').css('perspective','none');
-
-                            bi1.makeBreak();
-                            bi2.makeBreak();
-
-                            try {
-                                mv.slow(); //有时候直到现在 音乐都没有加载完
-                            }
-                            catch (e){}
-
-                            setTimeout(function () {
-                                $('.j-sky-block').remove();
-                                $('.j-intro-block').removeClass('hide');
-                                setTimeout(resolve,3000);
-                            }, 1000);
-                        });
-                    });
-
-                }
-            });
-
-            var timeSeed = 0;
-            window.onresize = function () {
-                timeSeed && clearTimeout(timeSeed);
-                timeSeed = setTimeout(function () {
-                    makeSky.restart();
-                }, 200);
-            };
-
-            setTimeout(function () {
-                document.getElementsByClassName('j-welcome-block')[0].remove();
-            }, 2000);
-        }
-
-        document.getElementsByClassName('j-welcome-btn')[0].addEventListener('click',function () {
-            if(!Cookie.get('finished')){
-                Cookie.set('finished','1',1);
-            }
-
-            step2();
-            step2 = function () {};
-        });
-
-        document.body.addEventListener("dblclick", function() {
-            if (runPrefixMethod(document, "FullScreen") || runPrefixMethod(document, "IsFullScreen")) {
-                runPrefixMethod(document, "CancelFullScreen");
-            } else {
-                runPrefixMethod(document.documentElement, "RequestFullScreen");
-            }
-        });
-
-    });
-
-    prmFirst.then(function () {
-        return new Promise(function (resolve) {
-            var code =
-                `
-/* ......
-* 厉害了我的哥，这下玩坏了吧！
-* 没办法，那只能重新造一个网页了╮(╯_╰)╭
-*/
-
-/* 首先给所有元素加上过渡效果 */
-* {
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-/* 还是用绚烂的星空背景才有逼格 */
-html,body {
-    background-image: url("https://t.cn/RotuF4m");
-    color: #333;
-}
-/* 好歹还是加个边框吧 */
-.display-block {
-    padding: 10px;
-    border: 2px solid rgb(0,155,255);
-    margin: 10px;
-    overflow: auto;
-    width: 400px; height: 90vh;
-    float: left;
-    background: rgba(0,155,255,0.5);
-}
-/* 还差一个版块来介绍自己 */
-.intro-box{
-    padding: 12px;
-    background: rgba(0,55,205,0.3);
-    margin: 10px;
-    min-height: 110vh;
-    overflow: hidden;
-}
-/* 使命完成了，给主要的版块让让位置吧 */
-.display-block {
-    transform-origin: 0 50%;
-    -webkit-transform: rotateY(30deg);
-    transform: rotateY(30deg);
-    margin-right: -100px;
-}
-`;
-            var idx = 0;
-            var len = code.length;
-            function appendStyle() {
-                $('.style-block').html('<style>' + code.slice(0,idx++) + '</style>');
-                $('.display-block').text(code.slice(0,idx)).scrollTop(9999);
-                if(idx === len){
-                    resolve();
-                    return;
-                }
-                setTimeout(appendStyle,30);
-            }
-            appendStyle();
-        });
-    }).then(function () {
-        $('body').removeClass('nocursor');
-        $('.j-intro-box-main').removeClass('hide');
-        var $introBoxHide = $('.intro-box-hide');
-        var len = $introBoxHide.length;
-        for (var i = 0; i < len; i++) {
-            (function (i) {
-                setTimeout(function () {
-                    $introBoxHide.eq(i).addClass('show');
-                },i*500);
-            })(i)
-        }
-    });
-</script>
-</body>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>index</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				list-style: none;
+				text-decoration: none;
+				text-align: center;
+			}
+			.clear:after {
+			    content: " "; 
+			    display: block;
+			    height: 0; 
+			    clear: both; 
+			    visibility: hidden;
+			} 
+			.container{
+				width:12.42rem;
+				margin:0 auto;
+				background: #ececec;
+				overflow: hidden;
+			}
+			.fixed{
+				position:fixed;
+				top:0;
+				left:0;
+				width:12.42rem;
+			}
+			header hgroup:nth-child(1){
+				background: #010101;
+				width:100%;
+				height:1.4rem;
+			}
+			.banner{
+				width:2.36rem;
+				float:left;
+				margin-left: .58rem;
+			}
+			.message{
+				float:left;
+				margin: .1rem 0 0 5.8rem;
+				display: block;
+				width:1.1rem;
+				height:1.1rem;
+				transition: all 0.2s
+			}
+			.message:hover{
+				transform: scale(1.1);
+			}
+			.message img{
+				width:1.1rem;
+			}
+			.back{
+				float:left;
+				margin: .3rem 0 0 .68rem;
+				display: block;
+				width:1.8rem;
+				line-height:.7rem;
+				font-size: .5rem;
+				color:#a4a4a4;
+				font-weight: 200;
+				transition: all 0.2s
+			}
+			.back:hover{
+				transform: scale(1.1);
+			}
+			.back p{
+				float: left;
+			}
+			.back img{
+				float: left;
+				margin-left: .3rem;
+				height:.7rem;
+			}
+			header hgroup:nth-child(2){
+				position:relative;
+				background: #ececec;
+				width:100%;
+				height: 1.8rem;
+			}
+			#search{
+				width:10.34rem;
+				height:1rem;
+				margin-top:.2rem;
+				border-radius: .5rem;
+				border:0.02rem solid #d2ae7e;
+				text-align: left;
+				padding-left: 1.1rem;
+				font-size: .44rem;
+				font-weight: 200;
+				outline:none;
+			}
+			#search::-webkit-input-placeholder{
+				color: #eadbc8;
+			}
+			header hgroup:nth-child(2) a{
+				position: absolute;
+				top:.34rem;
+				right:.5rem;
+				display: block;
+				width: 1.7rem;
+				height:1rem;
+				background: #d2ae7e;
+				border-top-right-radius: .5rem;
+				border-bottom-right-radius: .5rem;
+			}
+			header hgroup:nth-child(2) img{
+				margin-bottom:.16rem;
+				width:.6rem;
+			}
+			nav{
+				-webkit-overflow-scrolling: touch;
+				overflow-x: scroll;
+			}
+			nav ul{
+				width:18.6rem;
+				height: 1.5rem;
+				background: #010101;
+			}
+			nav ul li{
+				float: left;
+				line-height: 1.4rem;
+				font-size: .54rem;
+				margin-left: .68rem;
+			}
+			nav ul  li:hover{
+				border-bottom: 0.04rem solid #d3ad7c;
+			}
+			nav ul  li a{
+				color: #d3ad7c;
+			}
+			.acting{
+				width:12.42rem;
+				height: 1.5rem;
+				display: flex;
+				flex-flow: row;
+				background: #ffffff;
+			}
+			.acting li{
+				flex: 1;
+				font-size: .5rem;
+				line-height: 1.66rem;
+			}
+			.acting li a{
+				color: #101010;
+			}
+			.acting li a:hover{
+				color: #d4ae7f;
+			}
+			
+			.main{
+				background: #FFFFFF;
+				margin-top: 6.6rem;
+				padding: .46rem .5rem 1.6rem .5rem;
+			}
+			.video{
+				float:left;
+				width:5.62rem;
+				height:5rem;
+			}
+			.video:nth-child(2n){
+				margin-left: .1rem;
+			}
+			.video video{
+				width:100%;
+			}
+			.video p{
+				text-align: left;
+				margin-left: .34rem;
+			}
+			.video .title{
+				line-height: .9rem;
+				font-size: .4rem;
+				color:#5b5b5b;
+			}
+			.video .title:hover{
+				font-weight: 700;
+			}
+			.video .price{
+				line-height: .4rem;
+				font-size: .34rem;
+				color:#e75407;
+			}
+			.video .free{
+				color:#61b466;
+			}
+			.more{
+				width:100%;
+				height:1rem;
+				padding:0 0 .3rem 0;
+				background: #ececec;
+				line-height: 1rem;
+			}
+			.more a{
+				margin-top: -1rem;
+				font-size: .42rem;
+				color:#5a5a5a;
+			}
+			.advertisement{
+				margin-top: .2rem;
+				padding-top: .2rem;
+				background: #ececec;
+			}
+			.advertisement a{
+				display: block;
+				padding-bottom: -1rem;
+			}
+			.advertisement img{
+				width:100%;
+			}
+			.recommend{
+				padding:.3rem .5rem;
+				border-bottom: 0.04rem solid #ececec;
+			}
+			.recommend p.title{
+				width:100%;
+				height:.84rem;
+				line-height: .84rem;
+				font-size: .54rem;
+				color: #0f0f0f;
+				text-align: left;
+				padding-left: .2rem;
+				font-weight: 700;
+			}
+			.recommend a{
+				display: block;
+				padding: .2rem 0;
+			}
+			.recommend a .guess{
+				float:left;
+				width:5.02rem;
+			}
+			.recommend a .detail{
+				float: left;
+				width:4.96rem;
+				margin-left: .3rem;
+			}
+			.recommend a .detail p:nth-child(1){
+				text-align: left;
+				font-size: .48rem;
+				color: #3d3d3d;
+				font-weight: 700;
+			}
+			.recommend a .detail p:nth-child(2){
+				margin-top: .9rem;
+				text-align: left;
+				font-size:.42rem;
+				color: #afafaf;
+			}
+			footer{
+				position:fixed;
+				bottom:0;
+				left: 0;
+				display: flex;
+				flex-flow: row;
+				width:100%;
+				margin-top: .48rem;
+				padding: 0rem .18rem;
+				background: #FFFFFF;
+			}
+			footer div{
+				flex: 1;
+				display: block;
+			}
+			footer div a{
+				display: block;
+				width:1.1rem;
+				height:1.1rem;
+				margin:0 auto;
+			}
+			footer div a img{
+				width:100%;
+			}
+			footer div p{
+				font-size: .4rem;
+				color: #343434;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container clear">
+			<div class="fixed">
+				<header>
+					<hgroup class="clear">
+						<img src="images/banner.png" alt="load-err" class="banner"/>
+						<a href="#" class="message"><img src="images/message.png"/></a>
+						<a href="#" class="back clear">
+							<p>返回</p>
+							<img src="images/arrow.png" alt="load-err" />
+						</a>
+					</hgroup>
+					<hgroup class="clear">
+						<input type="text" name="search" id="search" value="" placeholder="搜索您的关键词"/>
+						<a href="#"><img src="images/search.png"/></a>
+					</hgroup>
+				</header>
+				<nav>
+					<ul>
+						<li><a href="#">任务大厅</a></li>
+						<li><a href="#">战队</a></li>
+						<li><a href="#">游戏生活</a></li>
+						<li><a href="#">游戏资讯</a></li>
+						<li><a href="#">战队</a></li>
+						<li><a href="#">游戏生活</a></li>
+						<li><a href="#">游戏资讯</a></li>
+					</ul>
+				</nav>
+				<ul class="acting">
+					<li><a href="#">代练任务</a></li>
+					<li><a href="#">代练直播</a></li>
+					<li><a href="#">团队介绍</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+			</div>
+			
+			<div class="main">
+				<div class="clear">
+					<div class="video">
+						<video src="#" poster="images/one.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price">￥20</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/two.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price free">免费</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/three.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price">￥20</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/four.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price free">免费</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/five.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price">￥20</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/six.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price free">免费</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/seven.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price">￥20</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/eight.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price free">免费</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/nine.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price">￥20</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/ten.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price free">免费</p>
+					</div>
+				</div>
+				<div class="more">
+					<a href="#">查看更多</a>
+				</div>
+				<div class="advertisement">
+					<a href="#"><img src="images/uc_browser.png" alt="" /></a>
+				</div>
+				<div class="recommend">
+					<p class="title">猜你喜欢</p>
+					<a href="#" class="clear">
+						<img class="guess" src="images/guess1.png" alt="load-err" />
+						<div class="detail">
+							<p>Mr.Cat与TeamVGJ达成协议  助力基辅Major</p>
+							<p>2017_08_08</p>
+						</div>
+					</a>
+					<a href="#" class="clear">
+						<img class="guess" src="images/guess2.png" alt="load-err" />
+						<div class="detail">
+							<p>Mr.Cat与TeamVGJ达成协议  助力基辅Major</p>
+							<p>2017_08_08</p>
+						</div>
+					</a>
+					<a href="#" class="clear">
+						<img class="guess" src="images/guess3.png" alt="load-err" />
+						<div class="detail">
+							<p>Mr.Cat与TeamVGJ达成协议  助力基辅Major</p>
+							<p>2017_08_08</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+			<footer>
+				<div class="home">
+					<a href="#"><img src="images/home.png"/></a>
+					<p>首页</p>
+				</div>
+				<div class="issue">
+					<a href="#"><img src="images/issue.png"/></a>
+					<p>发布</p>
+				</div>
+				<div class="live">
+					<a href="#"><img src="images/live.png"/></a>
+					<p>直播</p>
+				</div>
+				<div class="me">
+					<a href="#"><img src="images/me.png"/></a>
+					<p>我的</p>
+				</div>
+			</footer>
+			
+		</div>
+	</body>
+	<script>
+		document.getElementsByTagName("html")[0].style.fontSize=(window.innerWidth/1242)*100+"px";
+	</script>
 </html>
